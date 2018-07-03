@@ -16,4 +16,6 @@ urlpatterns = [
     # added the word 'specifics'
     # polls/specifics/12/  like details
     path('specifics/<int:question_id>/', views.specifics, name='specifics'),
+    # ex: /geo/
+    path('<int:question_id>/geo/', views.geoipnow, name='geo'),
 ]

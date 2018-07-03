@@ -4,8 +4,10 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import get_object_or_404, render
 from django.http import Http404
+from django.contrib.gis.geoip2 import GeoIP2
 
 from .models import Choice, Question
+
 
 def index(request):
     #return HttpResponse("Hello, world. You're at the polls index.")
@@ -75,3 +77,9 @@ def specifics(request, question_id):
     except Question.DoesNotExist:
         raise Http404("Question does not exist")
     return render(request, 'polls/detail.html', {'question': question})
+
+def geoipnow(request , question_id):
+    g = GeoIP2()
+    contruy =  g.country('google.com')
+    print(contruy)
+    return HttpResponse(contruy)

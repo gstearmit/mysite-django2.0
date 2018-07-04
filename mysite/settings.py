@@ -26,9 +26,17 @@ SECRET_KEY = 't0%60k)-rk(cwbs!1q!ff)05duf-+e^gv@ia(-@0b1qbc65*0!'
 DEBUG = True
 
 
+# Django Tracking Analyzer settings.
 GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
 # GEOIP_PATH = ROOT_PATH + '/geoip'
 # GEOIP_PATH = '/Users/gstearmit/mysite/geoip/'
+
+TRACKING_ANALYZER_MAXMIND_URL = \
+    "http://geolite.maxmind.com/download/geoip/database/"
+TRACKING_ANALYZER_MAXMIND_COUNTRIES = "GeoLite2-Country.mmdb.gz"
+TRACKING_ANALYZER_MAXMIND_CITIES = "GeoLite2-City.mmdb.gz"
+
+
 
 ALLOWED_HOSTS = []
 

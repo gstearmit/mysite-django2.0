@@ -5,6 +5,7 @@ from django.template import loader
 from django.shortcuts import get_object_or_404, render
 from django.http import Http404
 from django.contrib.gis.geoip2 import GeoIP2
+from tracking_analyzer.models import Tracker
 
 from .models import Choice, Question
 
@@ -17,6 +18,10 @@ def index(request):
     context = {
         'latest_question_list': latest_question_list,
     }
+
+    # Track the users access to the blog by post!
+    #Tracker.objects.create_from_request( request, latest_question_list)
+
     return HttpResponse(template.render(context, request))
 
 def detail(request, question_id):

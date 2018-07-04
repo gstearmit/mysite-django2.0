@@ -132,7 +132,7 @@ python manage.py runserver 8080
      $ brew install libmaxminddb
      https://github.com/maxmind/libmaxminddb
 
-5.0 GEO IP
+5.0 GEO IP : https://docs.djangoproject.com/en/1.10/ref/contrib/gis/geoip2/
     $ python
     Python 3.6.5 |Anaconda, Inc.| (default, Apr 26 2018, 08:42:37)
     [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
@@ -166,3 +166,11 @@ python manage.py runserver 8080
     (-95.4342, 29.834)
     >>> g.geos('24.124.1.80').wkt
     'POINT (-97 38)'
+
+
+
+6.0 https://github.com/jose-lpa/django-tracking-analyzer
+   TEST django-tracking-analyzer
+   https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests
+   https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests/test_admin.py
+   https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests/test_models.py

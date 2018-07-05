@@ -18,10 +18,6 @@ def index(request):
     context = {
         'latest_question_list': latest_question_list,
     }
-
-    # Track the users access to the blog by post!
-    #Tracker.objects.create_from_request( request, latest_question_list)
-
     return HttpResponse(template.render(context, request))
 
 def detail(request, question_id):
@@ -37,6 +33,10 @@ def results(request, question_id):
     # return HttpResponse(response % question_id)
     # cach 2dung 1 dong code
     question = get_object_or_404(Question, pk=question_id)
+
+    # Track the users access to the blog by post!
+    # Tracker.objects.create_from_request(request, question)
+
     return render(request, 'polls/results.html', {'question': question})
 
 def vote(request, question_id):

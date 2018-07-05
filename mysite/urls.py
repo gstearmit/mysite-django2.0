@@ -17,10 +17,18 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 
+# API
+from rest_framework import routers
+from rest.views import PostListCreateAPIView, PostDetailUpdateAPIView
+router = routers.SimpleRouter()
+router.register(r'posts', PostListCreateAPIView, base_name="Posts")     # đăng ký API vào router
+router.register(r'posts', PostDetailUpdateAPIView, base_name="Posts")
+
 urlpatterns = [
     path('', include('polls.urls')),  # index
     path('polls/', include('polls.urls')),  # Route Polls
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls))  #  Đăng ký router url vào project url
 ]
 
 if settings.DEBUG:

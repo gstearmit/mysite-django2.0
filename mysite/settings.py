@@ -38,7 +38,7 @@ TRACKING_ANALYZER_MAXMIND_CITIES = "GeoLite2-City.mmdb.gz"
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '0.0.0.0', 'beta.mydomain.com.vn','127.0.0.1' ]
 
 
 # Application definition
@@ -52,8 +52,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_user_agents',
-    'tracking_analyzer'
+    'tracking_analyzer',
+    'rest_framework',
+    'rest'
 ]
+
+# Cache backend is optional, but recommended to speed up user agent parsing
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
+# Name of cache backend to cache user agents. If it not specified default
+# cache alias will be used. Set to `None` to disable caching.
+USER_AGENTS_CACHE = 'default'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +77,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'

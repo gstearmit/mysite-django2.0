@@ -169,8 +169,28 @@ python manage.py runserver 8080
 
 
 
-6.0 https://github.com/jose-lpa/django-tracking-analyzer
+6.0  OverView Django 2.0  Tracking Analyzer
+     good : https://django-tracking-analyzer.readthedocs.io/en/latest/usage.html#overview
+
+   https://github.com/jose-lpa/django-tracking-analyzer
    TEST django-tracking-analyzer
    https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests
    https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests/test_admin.py
    https://github.com/jose-lpa/django-tracking-analyzer/blob/master/tests/test_models.py
+
+7.0 Rest API App django  : https://viblo.asia/p/advanced-django-rest-framework-3P0lPkebZox
+   $ pip install djangorestframework
+   $ pip install markdown
+   $ pip install django-filter
+
+   $ curl -i -H "Accept: application/json" http://127.0.0.1:8090/api/posts/
+    HTTP/1.1 200 OK
+    Date: Wed, 04 Jul 2018 23:55:11 GMT
+    Server: WSGIServer/0.2 CPython/3.6.5
+    Content-Type: application/json
+    Vary: Accept, Cookie
+    Allow: GET, POST, HEAD, OPTIONS
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 2
+
+    [{"id":3,"title":"Tôi học Django","content":"Đang học Django 2.0","draft":false,"read_time":-1,"updated":"2018-07-04T23:59:29.152836Z","created":"2018-07-04T23:59:29.152880Z"},{"id":2,"title":"chào Django 2.0","content":"Tôi đang lam app rest","draft":false,"read_time":-1,"updated":"2018-07-04T23:58:23.655632Z","created":"2018-07-04T23:58:23.655673Z"},{"id":1,"title":"Xin Chao","content":"Xin chao ngay moi\r\ntoi khoi om roi","draft":false,"read_time":0,"updated":"2018-07-04T23:57:35.427368Z","created":"2018-07-04T23:57:35.427417Z"}]GSTEARMITs-MacBook-Air:mysite gstearmit$

@@ -193,4 +193,17 @@ python manage.py runserver 8080
     X-Frame-Options: SAMEORIGIN
     Content-Length: 2
 
-    [{"id":3,"title":"Tôi học Django","content":"Đang học Django 2.0","draft":false,"read_time":-1,"updated":"2018-07-04T23:59:29.152836Z","created":"2018-07-04T23:59:29.152880Z"},{"id":2,"title":"chào Django 2.0","content":"Tôi đang lam app rest","draft":false,"read_time":-1,"updated":"2018-07-04T23:58:23.655632Z","created":"2018-07-04T23:58:23.655673Z"},{"id":1,"title":"Xin Chao","content":"Xin chao ngay moi\r\ntoi khoi om roi","draft":false,"read_time":0,"updated":"2018-07-04T23:57:35.427368Z","created":"2018-07-04T23:57:35.427417Z"}]GSTEARMITs-MacBook-Air:mysite gstearmit$
+    [{"id":3,"title":"Tôi học Django","content":"Đang học Django 2.0","draft":false,"read_time":-1,"updated":"2018-07-04T23:59:29.152836Z","created":"2018-07-04T23:59:29.152880Z"},{"id":2,"title":"chào Django 2.0","content":"Tôi đang lam app rest","draft":false,"read_time":-1,"updated":"2018-07-04T23:58:23.655632Z","created":"2018-07-04T23:58:23.655673Z"},{"id":1,"title":"Xin Chao","content":"Xin chao ngay moi\r\ntoi khoi om roi","draft":false,"read_time":0,"updated":"2018-07-04T23:57:35.427368Z","created":"2018-07-04T23:57:35.427417Z"}]
+
+
+8.0 TEST UNIT WITH MODUL BLOG  : http://test-driven-django-development.readthedocs.io/en/latest/02-models.html
+
+   $ python manage.py test blog
+
+   System check identified 1 issue (0 silenced).
+    ..
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.007s
+
+    OK
+    Destroying test database for alias 'default'..

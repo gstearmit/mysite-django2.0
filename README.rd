@@ -207,3 +207,7 @@ python manage.py runserver 8080
 
     OK
     Destroying test database for alias 'default'..
+
+
+9.0 Template Blog
+   http://127.0.0.1:8290/blog/1/

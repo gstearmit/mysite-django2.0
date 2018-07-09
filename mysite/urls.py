@@ -25,7 +25,12 @@ router.register(r'posts', PostListCreateAPIView, base_name="Posts")     # đăng
 router.register(r'posts', PostDetailUpdateAPIView, base_name="Posts")
 
 urlpatterns = [
-    path('', include('polls.urls')),  # index
+    # path('', include('polls.urls')),  # index
+    path('', include('blog.urls')),  # index
+    path('blog/', include('blog.urls')),  # Route Blog
+
+#  App Polls
+
     path('polls/', include('polls.urls')),  # Route Polls
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))  #  Đăng ký router url vào project url

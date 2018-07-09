@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'django_user_agents',
     'tracking_analyzer',
     'rest_framework',
-    'rest'
+    'rest',
+    'blog'
 ]
 
 # Cache backend is optional, but recommended to speed up user agent parsing

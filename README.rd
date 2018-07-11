@@ -211,3 +211,24 @@ python manage.py runserver 8080
 
 9.0 Template Blog
    http://127.0.0.1:8290/blog/1/
+
+
+10. https://github.com/bruth/django-tracking2
+   $ pip install django-tracking2
+
+   https://docs.djangoproject.com/en/2.0/ref/contrib/gis/geoip2/
+
+   ---------Error ----------:
+   /anaconda3/lib/python3.6/site-packages/tracking/models.py
+
+            "  from django.contrib.gis.geoip import HAS_GEOIP
+        ModuleNotFoundError: No module named 'django.contrib.gis.geoip'"
+
+  -------- Fixed trong ENV hoặc trong thư viên python 3.6 :----------
+
+        #from django.contrib.gis.geoip import HAS_GEOIP
+        #if HAS_GEOIP:
+
+        from django.contrib.gis.geoip2 import GeoIP2
+
+        #,GeoIPException

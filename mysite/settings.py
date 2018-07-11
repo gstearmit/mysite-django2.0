@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'tracking_analyzer',
     'rest_framework',
     'rest',
-    'blog'
+    'blog',
+    'tracking',
 ]
 
 # Cache backend is optional, but recommended to speed up user agent parsing
@@ -72,6 +73,7 @@ USER_AGENTS_CACHE = 'default'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #'tracking.middleware.VisitorTrackingMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

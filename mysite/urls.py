@@ -30,10 +30,15 @@ urlpatterns = [
     path('blog/', include('blog.urls')),  # Route Blog
 
 #  App Polls
-
     path('polls/', include('polls.urls')),  # Route Polls
+
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))  #  Đăng ký router url vào project url
+
+    # Tracking
+    path('tracking/', include('tracking.urls')),
+
+# API
+    path('api/', include(router.urls)),  #  Đăng ký router url vào project url
 ]
 
 if settings.DEBUG:

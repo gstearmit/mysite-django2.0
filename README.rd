@@ -232,3 +232,7 @@ python manage.py runserver 8080
         from django.contrib.gis.geoip2 import GeoIP2
 
         #,GeoIPException
+
+
+ 11 .  Selenium TDD
+     $ sudo pip install --upgrade selenium

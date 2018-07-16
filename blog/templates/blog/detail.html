@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load pinax_webanalytics_tags %}
 <style>
   /*icon styles*/
   .fi-social-facebook {
@@ -151,6 +152,9 @@
 <hr>
 <!-- Blog Details Weshop   -->
 <div class="container Blog Details">
+
+   {% analytics %}
+
   <section class="row">
         <header class="large-12 columns">
             <h1>Welcome to My Blog</h1>

@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'rest',
     'blog',
     'tracking',
+    'pinax.webanalytics',
+    'speedinfo'
 ]
 
 # Cache backend is optional, but recommended to speed up user agent parsing

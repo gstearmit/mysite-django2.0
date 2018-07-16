@@ -236,3 +236,27 @@ python manage.py runserver 8080
 
  11 .  Selenium TDD
      $ sudo pip install --upgrade selenium
+     $ conda install -c conda-forge geckodriver
+
+     Download the server separately, from: http://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
+
+    Run the server from the command line:
+
+    $ java -jar selenium-server-standalone-3.13.0.jar
+
+
+ 12. Useful Commands and Concepts
+    Running the Django dev server
+    $ python3 manage.py runserver
+    Running the functional tests
+    $ python3 functional_tests.py
+    Running the unit tests
+    $ python3 manage.py test
+    The unit-test/code cycle
+    1. Run the unit tests in the terminal.
+    2. Make a minimal code change in the editor.
+    3. Repeat!
+
+
+ 13. Install :
+     https://github.com/catcombo/django-speedinfo

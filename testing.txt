@@ -1,0 +1,27 @@
+certifi==2018.4.16
+chardet==3.0.4
+Django==2.0.7
+django-appconf==1.0.2
+django-countries==5.3.1
+-e git+https://github.com/jazzband/django-debug-toolbar.git@bfd7652354a397c59a091d67af2e84acdc14e439#egg=django_debug_toolbar
+django-filter==2.0.0
+django-ipware==2.1.0
+django-speedinfo==1.3.6
+django-tracking-analyzer==0.2
+django-tracking2==0.4.0
+django-user-agents==0.3.2
+djangorestframework==3.8.2
+geoip2==2.9.0
+idna==2.7
+Markdown==2.6.11
+maxminddb==1.4.1
+mysql-connector==2.1.6
+mysqlclient==1.3.13
+Pinax==0.9a2
+pinax-webanalytics==4.0.2
+pytz==2018.5
+requests==2.19.1
+sqlparse==0.2.4
+ua-parser==0.8.0
+urllib3==1.23
+user-agents==1.1.0

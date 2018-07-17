@@ -3,6 +3,7 @@ virtualenv -p python env
 env/bin/pip install django
 source env/bin/activate
 
+(env) Air:mysite $ python manage.py runserver 8290
 
 ---------------------
 python manage.py runserver 8080
@@ -111,17 +112,17 @@ python manage.py runserver 8080
     Installation
     Install Django Tracking Analyzer from PyPI by using pip:
 
-    pip install django-tracking-analyzer
+    $ pip install django-tracking-analyzer
     Add 'django_user_agents' and 'tracking_analyzer' entries to Django INSTALLED_APPS setting.
 
     Run the migrations to load the Tracker model in your database:
 
-    python manage.py migrate tracking_analyzer
+    $ python manage.py migrate tracking_analyzer
     Install the MaxMind® GeoIP2 datasets. You can do this in two ways:
 
     4.1. By running the provided management command for this:
 
-    python manage.py install_geoip_dataset
+    $ python manage.py install_geoip_dataset
     4.2. Or manually, by following the instructions in GeoIP2 Django documentation.
 
     ------> /Users/gstearmit/mysite/geoip/GeoLite2-City.mmdb dataset installed and ready for use.
@@ -257,6 +258,41 @@ python manage.py runserver 8080
     2. Make a minimal code change in the editor.
     3. Repeat!
 
+ 13 Install :
+    To install pinax-webanalytics:
+    $ pip install pinax-webanalytics
 
- 13. Install :
+ 14. Install :
+     $ pip install django-speedinfo
      https://github.com/catcombo/django-speedinfo
+
+
+ 15.
+  Error :
+     django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+     Did you install mysqlclient?
+
+  setup fixed error Django Mysql
+    ————————————————
+    https://stackoverflow.com/questions/44352341/setup-mysql-with-django-on-mac-os
+    https://stackoverflow.com/questions/43543483/pip-install-mysql-python-fails-with-indexerror/43543677
+
+
+    Copy from this blog.
+    By finding out the information that mysql-connector-cmight come to the conclusion that the configuration by brew installation may be incorrect ,
+    open the "/usr/local/bin/mysql_configscript" to modify some of the contents of it:
+    #Create options
+    Libs = "-L $ pkglibdir "
+    Libs = " $ libs   -l"
+    change into:
+    #Create options
+    Libs = "- L $ pkglibdir"
+    Libs = "$ libs -lmysqlclient -lssl -lcrypto"
+    Save Then re-install mysql-python:
+    pip install mysql-python
+
+
+
+16 . composer for Python
+
+    $ pip install -r requirements.txt

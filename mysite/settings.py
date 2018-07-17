@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'blog',
     'tracking',
     'pinax.webanalytics',
-    'speedinfo'
+    'speedinfo',
 ]
 
 # Cache backend is optional, but recommended to speed up user agent parsing
@@ -83,6 +83,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',
+    'speedinfo.middleware.ProfilerMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -169,6 +171,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+if not DEBUG:
+    STATIC_ROOT = '/Users/gstearmit/mysite/static/'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static/'),
+    ]
 
 ######### Debug Tools Bar #############
 

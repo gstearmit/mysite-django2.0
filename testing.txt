@@ -10,7 +10,7 @@ django-speedinfo==1.3.6
 django-tracking-analyzer==0.2
 django-tracking2==0.4.0
 django-user-agents==0.3.2
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 geoip2==2.9.0
 idna==2.7
 Markdown==2.6.11
